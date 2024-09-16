@@ -1,20 +1,21 @@
 suppressPackageStartupMessages({
   library(tidyverse)
   library(ggplot2)
-  library(mapview)
+  # library(mapview)
 })
 
-sq <- read_csv("~/repos/BIOS611/nyc_squirrels/data/nyc_squirrels.csv") %>% 
+sq <- read_csv("/home/rstudio/work/data/nyc_squirrels.csv") %>% 
   suppressMessages()
 
 colnames(sq)
 
 ggplot(sq, aes(long, lat)) +
-  geom_point()
+  geom_point() +
+  theme_classic()
 
-mapviewOptions(vector.palette = c("#C17F69", "#77B8DA"))
-mapview(sq, xcol = "long", ycol = "lat", crs = 4269, grid = FALSE,
-        zcol = "shift", alpha = 1, cex=2)
+# mapviewOptions(vector.palette = c("#C17F69", "#77B8DA"))
+# mapview(sq, xcol = "long", ycol = "lat", crs = 4269, grid = FALSE,
+#         zcol = "shift", alpha = 1, cex=2)
 
 # squirrel activities
 activities <- c("running", "chasing", "climbing", "eating", "foraging")
@@ -41,9 +42,9 @@ ggplot(sq, aes(location)) +
   geom_bar(stat="count") +
   theme_classic()
 
-mapviewOptions(vector.palette = c("#7DC1DA", "#6E9471"))
-mapview(sq, xcol = "long", ycol = "lat", crs = 4269, grid = FALSE,
-        zcol = "location", alpha = 1, cex=2)
+# mapviewOptions(vector.palette = c("#7DC1DA", "#6E9471"))
+# mapview(sq, xcol = "long", ycol = "lat", crs = 4269, grid = FALSE,
+#         zcol = "location", alpha = 1, cex=2)
 
 
 tail_cols <- c("tail_flags", "tail_twitches")

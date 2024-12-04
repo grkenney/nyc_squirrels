@@ -4,3 +4,6 @@
 
 # ignore analysis outputs
 report.html
+
+# ignore caches
+scripts/report_cache

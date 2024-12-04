@@ -4,6 +4,8 @@
 
 # ignore analysis outputs
 report.html
+derived_data
+figures
 
 # ignore caches
 scripts/report_cache

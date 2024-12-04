@@ -1,12 +1,47 @@
 ---
 title: "NYC Squirrel Census"
 author: "Grace Kenney"
-date: "2024-10-03"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, cache = TRUE)
 ```
 
-# My Report
+![](../data/header_image.png)
+https://www.thesquirrelcensus.com/
+
+```{r, echo=F}
+suppressPackageStartupMessages({
+  library(leaflet)
+})
+```
+
+```{r, echo=F}
+load("/home/rstudio/work/derived_data/sq_map.rda")
+my_map
+```
+
+# Questions:
+1. Squirrels found eating are more likely to be found above ground
+2. When squirrels are seen approaching humans, they will be more likely to be twitching their tail than squirrels that are indifferent
+3. Squirrels will tend to spatially cluster with other squirrels of the same color
+4. Squirrels will be more vocal in the morning than the afternoon
+5. Squirrel tail flags will correlate with squirrels that run from humans
+
+# 1. Squirrels found eating are more likely to be found above ground
+
+![](../figures/eating_location_bar.png)
+
+# 2. When squirrels are seen approaching humans, they will be more likely to be twitching their tail than squirrels that are indifferent
+
+![](../data/tail_movement_image.png)
+image credit: Delgado, Mikel & Jacobs, Lucia. (2016). Inaccessibility of Reinforcement Increases Persistence and Signaling Behavior in the Fox Squirrel (Sciurus niger). Journal of comparative psychology.
+
+![](../figures/tail_behavior_bar.png)
+
+![](../figures/cor_heatmap.png)
+
+![](../figures/activity_upset.png)
+
+![](../figures/behavior_upset.png)

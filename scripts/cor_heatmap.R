@@ -19,16 +19,16 @@ cor_mtx <- cor_mtx %>%
   as.matrix() %>% 
   replace(is.na(.), 1)
 
-png(height=1000, width=1000, file="figures/cor_heatmap.png")
+png(height=1500, width=1500, file="figures/cor_heatmap.png")
 corrplot(cor_mtx, 
          type="upper", 
          method="color", 
          tl.col="black", 
          col = rev(COL2('BrBG', 200)),
          addCoef.col = "black", 
-         number.cex = 1,
-         cl.cex = 2,
-         tl.cex = 2,
+         number.cex = 2,
+         cl.cex = 2.5,
+         tl.cex = 2.5,
          tl.srt=45, 
          diag=FALSE)
 dev.off()

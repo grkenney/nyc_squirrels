@@ -6,10 +6,10 @@ RUN apt update && apt install -y man && \
 
 RUN apt-get update 
 
-RUN mamba install r::r-leaflet r::r-tidyverse r::rstudio
-RUN mamba install r::r-codetools
+RUN mamba install r::r-leaflet r::r-tidyverse r::rstudio r::r-codetools
+RUN mamba install r-spdep
 
-RUN R -e "install.packages(c('corrplot', 'corrr', 'ggupset'), repos = 'http://cran.us.r-project.org')"
+RUN R -e "install.packages(c('patchwork', 'corrplot', 'corrr', 'ggupset'), repos = 'http://cran.us.r-project.org')"
 
 RUN echo "rsession-which-r=/usr/local/mambaforge/bin/R" > /etc/rstudio/rserver.conf
 

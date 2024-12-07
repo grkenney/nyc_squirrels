@@ -26,6 +26,7 @@ bash docker_launch.sh
 ```
 cd work
 export PATH="/usr/local/mambaforge/lib/R/bin:$PATH"
+make init
 make
 ```
 

@@ -16,7 +16,7 @@ plt <- sq %>%
   theme_classic() +
   xlab("Eating") + ylab("Proportion") +
   scale_fill_discrete(name = "Location") +
-  scale_fill_manual(values=c("#ebadad", "#b45454"))
+  scale_fill_manual(values=c("#eaa6a6", "#d54d4d"))
 
 ggsave(filename = "/home/rstudio/work/figures/eating_location_bar.png", 
        plot = plt, height = 3, width = 8)

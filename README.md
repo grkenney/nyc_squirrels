@@ -1,5 +1,7 @@
 # NYC Squirrel Census
 
+Data was acquired from [NCY Open Data](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw/about_data)
+
 ## Instructions
 
 Clone this repository and follow the steps below to generate the report.

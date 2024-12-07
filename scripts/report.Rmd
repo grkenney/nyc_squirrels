@@ -21,7 +21,7 @@ In October of 2018, volunteers recorded squirrel sightings in Central Park, New 
 
 ```{r, echo=F}
 suppressPackageStartupMessages({
-  library(leaflet)
+  library(leaflet) |> suppressWarnings()
 })
 ```
 

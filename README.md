@@ -2,6 +2,8 @@
 
 Data was acquired from [NCY Open Data](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw/about_data)
 
+This project generates a report analyzing the distribution of squirrels in NYC Central Park. Several distinctive features including fur color, tail behavior, and eating location are highlighted in this analysis.
+
 ## Instructions
 
 Clone this repository and follow the steps below to generate the report.
